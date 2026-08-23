@@ -1,4 +1,4 @@
-# GZ_AI
+![gz_ai logo](images/gz_ai.jpg)
 
 GZ_AI is a local retrieval-augmented generation (RAG) assistant built entirely with JavaScript and Node.js. It uses a local GGUF model through llama.cpp for inference and a lightweight TF-IDF index for local document retrieval. No Python is used anywhere in this project.
 
@@ -340,14 +340,9 @@ The file should be named `model.gguf`.
 ## License
 
 This project is licensed under the MIT License.
-![ceritificate ](images/mit-lincense.jpg)
+![ceritificate ](images/mit-license.jpg)
 ## Credits
-
 - llama.cpp for GGUF inference
 - Express for the web server
-- HuggingFace for model hosting
-```
-
----
-
-Copy this entire block and save it as `README.md` in your GZ_AI folder. This is the complete, ready-to-upload file for GitHub.
+- HuggingFace for model providing
+- GZ_Developer for providing documentation guide to run
