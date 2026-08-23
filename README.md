@@ -118,7 +118,7 @@ Expected output:
 [GZ_AI] Directory ready: books
 [GZ_AI] Directory ready: data/index
 [GZ_AI] Directory ready: models
-[GZ_AI] Model file found: 93.07 MB
+[GZ_AI] Model file found: 4.07 GB
 [GZ_AI] Loaded existing index with 88 chunks
 [GZ_AI] === Initialization Complete ===
 [GZ_AI] GZ_AI server running at http://127.0.0.1:3000
@@ -302,7 +302,7 @@ GZ_AI processes each user question through the following pipeline:
 
 ## Offline Behavior
 
-GZ_AI works fully offline for local books and model inference. Translation, DuckDuckGo, and Wikipedia require internet access. If these services are unavailable, the assistant continues using local content and original query text.
+![GZ AI online offline work flow](images/offline-online-work-flow.jpg)
 
 ## Security
 
@@ -340,7 +340,7 @@ The file should be named `model.gguf`.
 ## License
 
 This project is licensed under the MIT License.
-
+[ceritificate ](images/mit-lincense.jpg)
 ## Credits
 
 - llama.cpp for GGUF inference
