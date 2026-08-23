@@ -141,7 +141,7 @@ http://127.0.0.1:3000
 
 If you do not have a GGUF model, you can download one from the links below. Choose a model based on your system RAM and quality requirements.
 
-### Model Selection Table (70 Models)
+### Model Selection Table 
 
 | Model Name | Parameters | File Size (Q4_K_M) | RAM Required | Quality | Best For |
 |------------|------------|--------------------|--------------|---------|----------|
@@ -234,7 +234,7 @@ If you do not have a GGUF model, you can download one from the links below. Choo
 
 
 
-### Direct Download URLs (25 Models)
+### Direct Download URLs
 
 #### TinyLlama 1.1B Chat (Q4_K_M - 636 MB)
 
@@ -412,7 +412,7 @@ If you already have a GGUF model file, place it in the `models` directory and re
 cp /path/to/your/existing-model.gguf models/model.gguf
 ```
 
-## Model Catalog (40+ Models)
+## Model Catalog 
 
 Below is a comprehensive list of GGUF models suitable for different RAM capacities. All sizes are approximate for Q4_K_M quantization. RAM Required indicates the minimum system RAM needed to run the model comfortably.
 
