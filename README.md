@@ -235,7 +235,7 @@ npm update
 
 Below is the folder structure of the GZ_AI project:
 
-![GZ_AI Project Structure](images/project-structure.png)
+![GZ_AI Project Structure](images/project_structure.jpg)
 
 ## Configuration
 
@@ -298,13 +298,7 @@ Response:
 
 GZ_AI processes each user question through the following pipeline:
 
-1. Translation layer converts the query to English if needed.
-2. Local books are searched first using TF-IDF cosine similarity.
-3. If local relevance is above the configured threshold, only local content is used.
-4. If local relevance is weak, DuckDuckGo and Wikipedia are queried.
-5. The context builder combines the best retrieved content.
-6. The local GGUF model generates an answer using the context.
-7. The answer and sources are returned to the frontend.
+![GZ_AI Project Structure](images/work-flow.png)
 
 ## Offline Behavior
 
