@@ -340,7 +340,7 @@ The file should be named `model.gguf`.
 ## License
 
 This project is licensed under the MIT License.
-[ceritificate ](images/mit-lincense.jpg)
+![ceritificate ](images/mit-lincense.jpg)
 ## Credits
 
 - llama.cpp for GGUF inference
