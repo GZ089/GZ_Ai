@@ -53,11 +53,11 @@ Follow these steps to install and run GZ_AI on your system.
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/GZ_AI.git
+git clone https://github.com/gz089/GZ_AI.git
 cd GZ_AI
 ```
 
-Step 2: Install Dependencies
+### Step 2: Install Dependencies
 
 ```bash
 npm install
@@ -74,7 +74,7 @@ added 125 packages, and audited 126 packages in 15s
 found 0 vulnerabilities
 ```
 
-Step 3: Create Required Directories
+### Step 3: Create Required Directories
 
 ```bash
 mkdir books
@@ -83,23 +83,23 @@ mkdir data
 mkdir data/index
 ```
 
-Step 4: Place the GGUF Model
+### Step 4: Download or Place Model
 
-Copy your GGUF model file into the models directory and name it model.gguf.
+If you do not have a GGUF model, follow the Model Download Guide below. If you already have a model, place it in the `models` directory and rename it to `model.gguf`.
 
 ```bash
-cp /path/to/your/model.gguf models/model.gguf
+cp /path/to/your/existing-model.gguf models/model.gguf
 ```
 
-Step 5: Add Books
+### Step 5: Add Books
 
-Place your text, markdown, or PDF files into the books directory.
+Place your text, markdown, or PDF files into the `books` directory.
 
 ```bash
 cp /path/to/books/*.txt books/
 ```
 
-Step 6: Start the Server
+### Step 6: Start the Server
 
 ```bash
 npm start
@@ -124,7 +124,7 @@ Expected output:
 [GZ_AI] GZ_AI server running at http://127.0.0.1:3000
 ```
 
-Step 7: Open the Chat Interface
+### Step 7: Open the Chat Interface
 
 Open your browser and go to:
 
@@ -132,7 +132,86 @@ Open your browser and go to:
 http://127.0.0.1:3000
 ```
 
-Development
+## Model Download Guide
+
+If you do not have a GGUF model, you can download one from the links below. Choose a model based on your system RAM and quality requirements.
+
+### Model Selection Table
+
+| Model Name | Parameters | File Size | RAM Required | Quality | Best For |
+|------------|------------|-----------|--------------|---------|----------|
+| TinyLlama 1.1B Chat | 1.1B | 636 MB | 2 GB | Basic | Testing, low RAM |
+| Phi-2 | 2.7B | 1.6 GB | 4 GB | Good | CPU inference |
+| Mistral 7B Instruct | 7B | 4.1 GB | 8 GB | Excellent | Balanced quality |
+| Llama 3 8B Instruct | 8B | 4.7 GB | 8 GB | Very Good | General use |
+| Llama 3.2 3B Instruct | 3B | 2.0 GB | 4 GB | Good | Multilingual |
+| Qwen 2.5 7B Instruct | 7B | 4.7 GB | 8 GB | Excellent | Multilingual |
+
+### Direct Download URLs
+
+#### TinyLlama 1.1B Chat (Q4_K_M - 636 MB)
+
+```bash
+curl -L -o models/model.gguf "https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf"
+```
+
+#### Phi-2 (Q4_K_M - 1.6 GB)
+
+```bash
+curl -L -o models/model.gguf "https://huggingface.co/TheBloke/phi-2-GGUF/resolve/main/phi-2.Q4_K_M.gguf"
+```
+
+#### Mistral 7B Instruct (Q4_K_M - 4.1 GB)
+
+```bash
+curl -L -o models/model.gguf "https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/resolve/main/mistral-7b-instruct-v0.2.Q4_K_M.gguf"
+```
+
+#### Llama 3 8B Instruct (Q4_K_M - 4.7 GB)
+
+```bash
+curl -L -o models/model.gguf "https://huggingface.co/TheBloke/Llama-3-8B-Instruct-GGUF/resolve/main/llama-3-8b-instruct.Q4_K_M.gguf"
+```
+
+#### Llama 3.2 3B Instruct (Q4_K_M - 2.0 GB)
+
+```bash
+curl -L -o models/model.gguf "https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf"
+```
+
+#### Qwen 2.5 7B Instruct (Q4_K_M - 4.7 GB)
+
+```bash
+curl -L -o models/model.gguf "https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf"
+```
+
+### Model Download Instructions
+
+1. Select a model from the table above based on your RAM.
+2. Copy the download command for that model.
+3. Open a terminal in the GZ_AI directory.
+4. Run the command. The model will download directly to the `models` folder.
+5. Wait for the download to complete. Large files may take several minutes.
+6. Start the server with `npm start`.
+
+### Using Your Existing Model
+
+If you already have a GGUF model file, place it in the `models` directory and rename it to `model.gguf`.
+
+```bash
+cp /path/to/your/existing-model.gguf models/model.gguf
+```
+
+### Recommended Models by RAM
+
+| System RAM | Recommended Model | File Size |
+|------------|-------------------|-----------|
+| 4 GB | TinyLlama 1.1B | 636 MB |
+| 8 GB | Phi-2 or Mistral 7B | 1.6 GB - 4.1 GB |
+| 16 GB | Llama 3 8B or Qwen 7B | 4.7 GB |
+| 32 GB | Llama 3 8B or larger | 4.7 GB+ |
+
+## Development
 
 To run the server in development mode with automatic restarts:
 
@@ -152,43 +231,31 @@ To update all packages:
 npm update
 ```
 
-Project Structure
+## Project Structure
 
-```
-GZ_AI/
-├── app.js
-├── config.js
-├── index.html
-├── package.json
-├── README.md
-├── books/
-│   ├── book1.txt
-│   └── book2.txt
-├── models/
-│   └── model.gguf
-└── data/
-    └── index/
-        └── book-tfidf-index.json
-```
+Below is the folder structure of the GZ_AI project:
 
-Configuration
+![GZ_AI Project Structure](images/project-structure.png)
 
-All settings are located in config.js. You can adjust the following options:
+## Configuration
 
-Setting Description Default
-modelPath Path to GGUF model ./models/model.gguf
-contextSize Context window size in tokens 4096
-maxTokens Maximum response length 512
-temperature Response creativity 0.7
-cpuThreads CPU threads for inference 4
-gpuLayers GPU layers to use 0
-topK Number of chunks to retrieve 5
-minLocalRelevance Threshold for local-only answers 0.30
-port Server port 3000
+All settings are located in `config.js`. You can adjust the following options:
 
-API Endpoints
+| Setting | Description | Default |
+|---------|-------------|---------|
+| `modelPath` | Path to GGUF model | `./models/model.gguf` |
+| `contextSize` | Context window size in tokens | `4096` |
+| `maxTokens` | Maximum response length | `512` |
+| `temperature` | Response creativity | `0.7` |
+| `cpuThreads` | CPU threads for inference | `4` |
+| `gpuLayers` | GPU layers to use | `0` |
+| `topK` | Number of chunks to retrieve | `5` |
+| `minLocalRelevance` | Threshold for local-only answers | `0.30` |
+| `port` | Server port | `3000` |
 
-POST /api/chat
+## API Endpoints
+
+### POST /api/chat
 
 Request:
 
@@ -215,7 +282,7 @@ Response:
 }
 ```
 
-GET /api/status
+### GET /api/status
 
 Response:
 
@@ -227,7 +294,7 @@ Response:
 }
 ```
 
-How It Works
+## How It Works
 
 GZ_AI processes each user question through the following pipeline:
 
@@ -239,17 +306,17 @@ GZ_AI processes each user question through the following pipeline:
 6. The local GGUF model generates an answer using the context.
 7. The answer and sources are returned to the frontend.
 
-Offline Behavior
+## Offline Behavior
 
 GZ_AI works fully offline for local books and model inference. Translation, DuckDuckGo, and Wikipedia require internet access. If these services are unavailable, the assistant continues using local content and original query text.
 
-Security
+## Security
 
 All book and web content is treated as untrusted data. Retrieved content never overrides the system prompt. The frontend sanitizes displayed text and does not execute JavaScript from retrieved documents.
 
-Common Issues
+## Common Issues
 
-npm install fails
+### npm install fails
 
 Clear the npm cache and try again:
 
@@ -258,15 +325,15 @@ npm cache clean --force
 npm install
 ```
 
-Port already in use
+### Port already in use
 
-Change the port in config.js to another value:
+Change the port in `config.js` to another value:
 
 ```javascript
 port: 3001
 ```
 
-Model not loading
+### Model not loading
 
 Check that the model file exists:
 
@@ -274,20 +341,19 @@ Check that the model file exists:
 ls models/
 ```
 
-The file should be named model.gguf.
+The file should be named `model.gguf`.
 
-License
+## License
 
 This project is licensed under the MIT License.
 
-Credits
+## Credits
 
-· llama.cpp for GGUF inference
-· Express for the web server
-· HuggingFace for model hosting
-
+- llama.cpp for GGUF inference
+- Express for the web server
+- HuggingFace for model hosting
 ```
 
 ---
 
-This README is written in plain, professional English without emojis and includes all necessary sections for a GitHub repository.
+Copy this entire block and save it as `README.md` in your GZ_AI folder. This is the complete, ready-to-upload file for GitHub.
