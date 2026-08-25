@@ -1,4 +1,12 @@
 
+# GZ_Developer | AI/ML Engineer & Software Developer
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Now-blue?style=for-the-badge&logo=google-chrome)](https://gz-developer.netlify.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/gz089)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/gul-zaman-39319025b/)
+[![Facebook](https://img.shields.io/badge/Facebook-Follow-blue?style=for-the-badge&logo=facebook)](https://web.facebook.com/profile.php?id=100089764673886)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat%20Now-green?style=for-the-badge&logo=whatsapp)](https://wa.me/923123456789)
+
 <div align="center">
     <img src="images/gz_ai.jpg" alt="GZ_AI Logo" width="200" height="200" style="border-radius: 80%; object-fit: cover;">
     <h1>GZ_AI</h1>
